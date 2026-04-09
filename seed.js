@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
 
-const MONGO_URI = "mongodb://127.0.0.1:27017/quiz_db";
+const MONGO_URI = "mongodb+srv://workuchala739_db_user:8Ud9JpsNMTON9zzN@cluster0.8wkptwr.mongodb.net/?appName=Cluster0";
 
 const QuestionSchema = new mongoose.Schema({
   category: String,
