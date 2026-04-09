@@ -30,13 +30,13 @@ export default function Home() {
     setError("");
     try {
       // 1. First check if backend is alive
-      const healthCheck = await fetch("http://127.0.0.1:5000/api/health").catch(() => null);
+      const healthCheck = await fetch("/api/health").catch(() => null);
       if (!healthCheck) {
         throw new Error("SERVER_DOWN");
       }
 
       // 2. Fetch questions
-      const response = await fetch(`http://127.0.0.1:5000/api/questions/${sub}`);
+      const response = await fetch(`/api/questions/${sub}`);
       if (!response.ok) throw new Error("FETCH_ERROR");
       
       const data = await response.json();
